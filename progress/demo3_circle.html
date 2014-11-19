@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Progress circle</title>
+	<style>
+		body {
+			font-family: "Microsoft Yahei";
+		}
+		.circle {
+			width: 100px;
+			height: 100px;
+			position: relative;
+			border-radius: 50%;
+			background: #00aacc;
+			float: left;
+		}
+		.pie_left, .pie_right {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.left, .right {
+			width: 100px;
+			height: 100px;
+			background: #CFD0D0;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.pie_right, .right {
+			clip: rect(0, auto, auto, 50px);
+		}
+		.pie_left, .left {
+			clip: rect(0, 50px, auto, 0);
+		}
+		.mark {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			left: 10px;
+			top: 10px;
+			background: #fff;
+			position: absolute;
+			text-align: center;
+			line-height: 80px;
+			font-size: 20px;
+			font-weight: bold;
+			color: #00aacc;
+		}
+	</style>
+</head>
+<body>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>0</span>%</div>
+	</div>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>10</span>%</div>
+	</div>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>20</span>%</div>
+	</div>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>30</span>%</div>
+	</div>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>40</span>%</div>
+	</div>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>50</span>%</div>
+	</div>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>60</span>%</div>
+	</div>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>70</span>%</div>
+	</div>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>80</span>%</div>
+	</div>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>90</span>%</div>
+	</div>
+	<div class="circle">
+		<div class="pie_left"><div class="left"></div></div>
+		<div class="pie_right"><div class="right"></div></div>
+		<div class="mark"><span>100</span>%</div>
+	</div>
+	
+	<script src="../lib/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$(".circle").each(function(index, el){
+				var num = $(this).find('span').text() * 3.6;
+				if(num <= 180){
+					$(this).find('.right').css('transform', 'rotate('+num+'deg)');
+				}else {
+					$(this).find('.right').css('transform', 'rotate(180deg)');
+					$(this).find('.left').css('transform', 'rotate('+(num-180)+'deg)');
+				}
+			})
+		})
+	</script>
+
+</body>
+</html>

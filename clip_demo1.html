@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CLIP</title>
+	<style>
+		.relative {
+			position: relative;
+		}
+		#rect1 {
+			width: 200px;
+			height: 200px;
+			background: #ccc;
+			position: absolute; /* clip只试用于absolute和fixed */
+			clip: rect(5px, 140px, 45px, 5px);
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="relative">
+		<div id="rect1"></div>
+	</div>
+	
+</body>
+</html>
