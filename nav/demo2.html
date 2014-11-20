@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nav demo2</title>
+	<style>
+		body {
+			background: #000;
+			font: 10pt/1.3em Verdana, sans-serif;
+		}
+		#wrap {
+			background: #fff;
+		}
+		#wrap h1 {
+			font-size: 32px;
+			color: #003380;
+			font-weight: normal;
+			padding: 30px 30px;
+			letter-spacing: -1px;
+		}
+		#nav {
+			display: block;
+			width: 100%;
+			padding: 0px 30px;
+			margin: 0px;
+			overflow: hidden;
+			background: #353636;
+		}
+		#nav li {
+			float: left;
+			list-style: none;
+			margin:5px 4px 0 0;
+		}
+		#nav li a {
+			display: block;
+			padding: 8px 8px;
+			background: #9d9d9d;
+			border-radius: 5px 5px 0 0;
+			text-decoration: none;
+			color: #101010;
+		}
+		#nav li.current a {
+			background: #fff;
+			text-shadow: 0px 0px 1px #000;
+		}
+		#nav li a:hover {
+			background: #d5d5d5;
+		} 
+		#content {
+			padding: 30px;
+		}
+		#content h2 {
+			padding: 0px;
+			margin: 0px;
+			color: #003380;
+			font-size: 20px;
+			font-weight: normal;
+		}
+		#content .important {
+			border-top: 1px solid #ffcccc;
+			border-bottom: 1px solid #ffcccc;
+			padding: 2px 0px;
+			color: #552222;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>Tabbed Navigation Using CSS</h1>
+		<ul id="nav">
+			<li class="current"><a href="#">Introduction</a></li>
+			<li><a href="#">Step 1: The structure</a></li>
+			<li><a href="#">Step 2: The image</a></li>
+			<li><a href="#">Step 3: Design</a></li>
+			<li><a href="#">Bonus: Javascript</a></li>
+			<li><a href="#">Feedback</a></li>
+		</ul>
+		<div id="content">
+			<h2>Introduction</h2>
+			<p class="important">
+				The contents of this tutorial – including the images, HTML, JavaScript and CSS – is licensed under an MIT license and is therefore free for you to use. Attribution is appreciated, but not required.
+			</p>
+			<p>
+				Hello, fellow web designer! My name is Andreas Blixt. I'm glad you decided to take the time to read my tutorial! Hopefully you'll be on your way to creating tabs on your website in no time! 
+			</p>
+			<p>
+				This tutorial will teach you how to create low-bandwidth tab navigation on a web page using CSS. As an extra bonus you'll also learn how to switch tabs without loading the page more than once.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

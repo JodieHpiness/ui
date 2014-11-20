@@ -4,22 +4,27 @@
 	<meta charset="UTF-8">
 	<title>CLIP</title>
 	<style>
-		.relative {
+		.origin {
+			float: left;
+		}
+		#imgClip {
 			position: relative;
+			width: 350px;
+			height: 477px;
+			background-color: #2C384D;
+			float: left;
 		}
-		#rect1 {
-			width: 200px;
-			height: 200px;
-			background: #ccc;
-			position: absolute; /* clip只试用于absolute和fixed */
-			clip: rect(5px, 140px, 45px, 5px);
+		#imgClip img {
+			position: absolute;
+			clip: rect(235px 287px 418px 84px); 
+			clip: rect(235px, 287px, 418px, 84px); 
 		}
-		
 	</style>
 </head>
 <body>
-	<div class="relative">
-		<div id="rect1"></div>
+	<img src="img/girl.jpeg" alt="" class="origin" width="350px" height="477px">
+	<div id="imgClip">
+		<img src="img/girl.jpeg" alt="" width="350px" height="477px">
 	</div>
 	
 </body>

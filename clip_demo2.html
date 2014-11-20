@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CLIP demo2</title>
+	<style>
+		img {
+			position: absolute;
+			left: 10px;
+			top: 60px;
+			display: block;
+			clip: rect(200px, 0, 0, 400px);
+			-webkit-transition: all 0.5s ease-out;
+			-moz-transition: all 0.5s ease-out;
+			transition: all 0.5s ease-out;
+		}
+		span:hover ~ img {
+			clip: rect(0, 400px, 200px, 0);
+		}
+		span {
+			display: inline-block;
+			padding: 10px;
+			margin: 10px;
+			background: #08c;
+			color: white;
+			font-family: "Helvetica", "Arial", sans-serif;
+			font-weight: bold;
+			text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+			text-align: center;
+			cursor: pointer;
+		}
+		span:hover {
+			background: #09c;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<span>Hover me</span>
+	<img src="img/home.jpeg" alt="">
+</body>
+</html>

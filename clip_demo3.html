@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CLIP DEMO3</title>
+	<style> 
+		body {   
+		  overflow: hidden; 
+		} 
+		 
+		ul { 
+		  padding: 0; 
+		  margin: 10px; 
+		  list-style: none; 
+		  width: 300px; 
+		  height: 300px; 
+		  box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+		} 
+		 
+		ul:after { 
+		  clear: both; 
+		  content: ""; 
+		  display: table; 
+		} 
+		 
+		li { 
+		  position: relative; 
+		  float: left; 
+		  width: 100px; 
+		  height: 100px; 
+		  background: url(' http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/pw_maze_white.png'); 
+		  cursor: pointer; 
+		} 
+		 
+		li:nth-of-type(3n+1) { 
+		  clear: both; 
+		} 
+		 
+		img { 
+		  position: absolute; 
+		  display: block; 
+		  clip: rect(0, 100px, 100px, 0); 
+		  opacity: 0.6; 
+		} 
+		 
+		li:hover img { 
+		  clip: rect(0, 300px, 300px, 0); 
+		  opacity: 1; 
+		} 
+		 
+		li:nth-of-type(3n+1):hover img { 
+		  left: 310px; 
+		} 
+		 
+		li:nth-of-type(3n+2):hover img { 
+		  left: 210px; 
+		} 
+		 
+		li:nth-of-type(3n):hover img { 
+		  left: 110px; 
+		} 
+		 
+		li:nth-of-type(n+4):nth-of-type(-n+6):hover img { 
+		  top: -100px; 
+		} 
+		 
+		li:nth-of-type(n+7):nth-of-type(-n+9):hover img { 
+		  top: -200px; 
+		}  
+</style> 
+
+</head>
+<body>
+	<ul> 
+	  <li><img src="http://lorempixel.com/300/300/sports/"></li> 
+	  <li><img src="http://lorempixel.com/300/300/animals/"></li> 
+	  <li><img src="http://lorempixel.com/300/300/abstract/"></li> 
+	  <li><img src="http://lorempixel.com/300/300/nightlife/"></li> 
+	  <li><img src="http://lorempixel.com/300/300/city/"></li> 
+	  <li><img src="http://lorempixel.com/300/300/food/"></li> 
+	  <li><img src="http://lorempixel.com/300/300/people/"></li> 
+	  <li><img src="http://lorempixel.com/300/300/nature/"></li> 
+	  <li><img src="http://lorempixel.com/300/300/fashion/"></li> 
+	</ul> 
+
+</body>
+</html>
