@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nav demo7</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		#navbox {
+			box-shadow: 0 0 10px 1px #000;
+			margin: 0 auto;
+		}
+		.nav  {
+			display: block;
+			margin-left: 30px;
+		}
+		.nav li {
+			float: left;
+			margin-right: 5px;
+			list-style: none;
+		}
+		.nav li a {
+			box-shadow: 0 0 10px -10px #000;
+			-webkit-transition: all 0.3s ease-out;
+			display: block;
+			padding: 20px;
+			border-radius: 0 0 5px 5px;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.nav li:nth-of-type(1) a {
+			background: #3833FF;
+		}
+		.nav li:nth-of-type(2) a {
+			background: #33B9FF;
+		}
+		.nav li:nth-of-type(3) a {
+			background: #33FFB9;
+		}
+		.nav li:nth-of-type(4) a {
+			background: #FFD633;
+		}
+		.nav li:nth-of-type(5) a {
+			background: #FF9833;
+		}
+		.nav li:nth-of-type(6) a {
+			background: #FF5233;
+		}
+		.nav li a:hover {
+			padding: 20px 20px 30px 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="navbox">
+		<ul class="nav">
+			<li><a href="#">Step 1</a></li>
+			<li><a href="#">Step 2</a></li>
+			<li><a href="#">Step 3</a></li>
+			<li><a href="#">Step 4</a></li>
+			<li><a href="#">Step 5</a></li>
+			<li><a href="#">Step 6</a></li>
+		</ul>
+	</div>
+</body>
+</html>
