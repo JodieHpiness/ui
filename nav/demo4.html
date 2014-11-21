@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nav Demo4</title>
+	<style>
+	
+	#wrap {
+		font: small 12px/16px arial ;
+	}
+	#nav {
+		height: 50px;
+	}
+	#nav li{
+		float: left;
+		list-style: none;
+	}
+	#nav li a{
+		display: block;
+		padding: 20px 30px;
+		position: relative;
+		text-decoration: none;
+		background: #fff;
+		border-top: 3px solid #fff;
+		border-left: 1px solid #fff;
+		border-right: 1px solid #fff;
+		border-bottom: 1px solid #f0f0f0;
+		color: #ccc;
+	}
+	#nav li a.current{
+		border-top: 3px solid #39f;
+		border-left: 1px solid #f0f0f0;
+		border-right: 1px solid #f0f0f0;
+		border-bottom: 1px solid #fff;
+	}
+	#nav li a:hover  {
+		color: #39f;
+	}
+	#nav li a.current:before {
+		content: "";
+		position: absolute;
+		width: 20px;
+		height: 19px;
+		background: url(img/tab-shadow-left.png) no-repeat;
+		bottom: 0px;
+		left: -20px;
+		z-index: 2;
+	}
+	#nav li a.current:after {	
+		content: "";
+		position: absolute;
+		width: 20px;
+		height: 19px;
+		background: url(img/tab-shadow-right.png) no-repeat;
+		bottom: 0px;
+		right: -20px;
+		z-index: 2;
+	}
+	</style>
+</head>
+<body>
+	
+	<div id="wrap">
+		<ul id="nav">
+			<li><a href="#">0001</a></li>
+			<li><a href="#">0002</a></li>
+			<li><a href="#" class="current">0003</a></li>
+			<li><a href="#">0004</a></li>
+		</ul>
+	</div>
+</body>
+</html>
