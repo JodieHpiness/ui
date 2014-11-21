@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nav Demo5</title>
+	<style>
+		body {
+			font: small 12px/16px arial;
+			text-shadow: 0 0 1px #ff9999;
+		}
+		#wrap {
+			width: 200px;
+		}
+		#nav {
+			width: 200px;
+			border-radius: 5px;
+		}
+		#nav li {
+			width: 200px;
+			list-style: none;
+			background: #F5E7EC;
+		}
+		#nav li a {
+			display: block;
+			padding: 5px 30px;
+			margin-left: 5px;
+			text-decoration: none;
+			color: #9B5151;
+			border-top: 0px solid #F5E7EC;
+			border-left: 1px solid #F5E7EC;
+			border-right: 1px solid #FD92A1;
+			border-bottom: 1px solid #FAC9D0;
+		}
+		#nav li a.current {
+			background: #fff;
+			border-top: 1px solid #FD92A1;
+			border-left: 1px solid #FD92A1;
+			border-right: 1px solid #fff;
+			border-bottom: 1px solid #FD92A1;
+			border-radius: 3px 0 0 3px;
+			text-decoration: underline;
+		}
+		#nav li a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<ul id="nav">
+			<li><a href="#">00001</a></li>
+			<li><a href="#">00002</a></li>
+			<li><a href="#" class="current">00003</a></li>
+			<li><a href="#">00004</a></li>
+			<li><a href="#">00005</a></li>
+		</ul>
+	</div>
+</body>
+</html>
