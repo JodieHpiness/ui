@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Table</title>
+
+	<style>
+		body {
+			font: 12px/16px arial;
+			letter-spacing: 1px;
+		}
+		.responstable {
+			width: 95%;
+			margin: 30px auto;
+			border-collapse: collapse;
+		}
+		.responstable tr th {
+			background: #167F92;
+			color: #fff;
+			font-weight: bold;
+			padding: 10px;
+			text-align: center;
+		}
+		.responstable tr th:first-child {
+			border-radius: 5px 0 0 0;
+		}
+		.responstable tr th:last-child {
+			border-radius: 0 5px 0 0;
+		}
+		.responstable tr td {
+			background: #fff;
+			border-bottom: 1px solid #167f92;
+			padding: 10px;
+			text-align: center;
+		}
+		.responstable tr:nth-child(even) td {
+			background: #E7ECFD;
+		}
+		.responstable tr:hover td {
+			background: #C7D2FA;
+		}
+		.responstable tr td em {
+			display: block;
+			width: 20px;
+			height: 20px;
+			background: #167F92;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<table class="responstable">
+		<tr>
+			<th>Title 1</th>
+			<th>Title 2</th>
+			<th>Title 3</th>
+			<th>Title 4</th>
+			<th><em></em></th>
+		</tr>
+		<tr>
+			<td><input type="radio"></td>
+			<td>Data 2</td>
+			<td>Data 3</td>
+			<td>Data 4</td>
+			<td><em></em></td>
+		</tr>
+		<tr>
+			<td><input type="radio"></td>
+			<td>Data 2</td>
+			<td>Data 3</td>
+			<td>Data 4</td>
+			<td><em></em></td>
+		</tr>
+		<tr>
+			<td><input type="radio"></td>
+			<td>Data 2</td>
+			<td>Data 3</td>
+			<td>Data 4</td>
+			<td><em></em></td>
+		</tr>
+		<tr>
+			<td><input type="radio"></td>
+			<td>Data 2</td>
+			<td>Data 3</td>
+			<td>Data 4</td>
+			<td><em></em></td>
+		</tr>
+	</table>
+</body>
+</html>
