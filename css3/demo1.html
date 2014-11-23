@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 DEMO</title>
+	<style>
+		body {
+			font: 12px/16px 'Microsoft Yahei', arial;
+		}
+		.wrap {
+			box-shadow: 0px 0px 10px 1px #ccc;
+			border: 1px solid #ccc;
+			width: 500px;
+			min-height: 100px;
+			margin: 10px;
+			padding: 20px;
+			letter-spacing: 1px;
+		}
+		.wrap h1 {
+			color: #838383;
+			font-size: 20px;
+			text-shadow: 1px 1px 1px #000;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.wrap .prev {
+			margin-left: 30px;
+		}
+		#wrap1 .prev p:nth-child(2n){
+			background: #BCDDFD;
+		}
+		#wrap2 .prev input[type="checkbox"]:checked {
+			margin-left: 10px;
+		}
+		#wrap3 .prev {
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+		#wrap4 .prev {
+			border: 1px solid #ccc;
+			-webkit-box-shadow: 10px 10px 5px #888;
+			   -moz-box-shadow: 10px 10px 5px #888;
+			   		box-shadow: 10px 10px 5px #888;
+		}
+		#wrap5 .prev {
+			border: 1px solid #ccc;
+			padding: 10px;
+			text-shadow: 2px 2px 1px #f24;
+		}
+		#wrap6 .prev > div {
+			border: 1px solid #ccc;
+			padding: 10px;
+			width: 200px;
+		}
+		#prev1 {
+		}
+		#prev2 {
+			margin-top: 10px;
+			word-wrap: break-word;
+		}
+		#wrap7 .prev .img1{
+			border: 1em;
+			-moz-border-image: url(../img/circle.jpg) 5 5 5 5 round;
+			-webkit-border-image: url(../img/circle.jpg) 5 5 5 5 round;
+		}
+		#wrap7 .prev .img2{
+			border: 1em;
+			-moz-border-image: url(../img/circle.jpg) 5 5 5 5 stretch;
+			-webkit-border-image: url(../img/circle.jpg) 5 5 5 5 stretch;
+		}
+		#wrap8 .prev {
+			resize: both;
+			overflow: auto;
+			width: 200px;
+			height: 100px;
+			border: 1px solid #ccc;
+		}
+		#wrap9 .prev {
+			border: 1px solid #ccc;
+			outline-offset: 10px;
+			outline: 2px solid #BCDDFD;
+		}
+		#wrap10 .prev > div {
+			border: 1px solid #ccc;
+			padding: 10px;
+			margin-top: 10px;
+		}
+		#wrap10 .prev > div.d1 {
+			transform: rotate(30deg);
+			-moz-transform: rotate(30deg);
+			-webkit-transform: rotate(30deg);
+		}
+		#wrap10 .prev > div.d2 {
+			transform: scale(0.8, 2.0);
+			-moz-transform: scale(0.8, 2.0);
+			-webkit-transform: scale(0.8, 2.0);
+		}
+		#wrap10 .prev > div.d3 {
+			transform: skew(-30deg);
+			-moz-transform: skew(-30deg);
+			-webkit-transform: skew(-30deg);
+		}
+		#wrap10 .prev > div.d4 {
+			transform: translate(30px, 0);
+			-moz-transform: translate(30px, 0);
+			-webkit-transform: translate(30px, 0);
+		}
+		#wrap11 .prev {
+			border: 1px solid #ccc;
+			background: #3399ff;
+			border-radius: 5px;
+			padding: 10px;
+			transition: all 1s ease-out;
+		}
+		#wrap11 .prev:hover {
+			background: #13f;
+		}
+		#wrap12 .prev {
+			border: 1px solid #ccc;
+			background: #3399ff;
+			border-radius: 5px;
+			padding: 10px;
+			-webkit-animation: greenPulse infinite ease-in-out 3s;
+		}
+		#wrap12 .prev:hover {
+			background: #13f;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap" id="wrap1">
+	 	<h1>1. :nth-child</h1>
+		<div class="prev">
+			<p>0000000001</p>
+			<p>0000000002</p>
+			<p>0000000003</p>
+			<p>0000000004</p>
+			<p>0000000005</p>
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap2">
+		<h1>2. :checked</h1>
+		<div class="prev">
+			<input type="checkbox"> checkbox1  <br>
+			<input type="checkbox" checked="checked"> checkbox2
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap3">
+		<h1>3. border-radius</h1>
+		<div class="prev">
+			<ul>
+				<li>-webkit-border-radius: 5px</li>
+				<li>-moz-border-radius: 5px</li>
+				<li>border-radius: 5px</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap4">
+		<h1>4. box-shadow</h1>
+		<div class="prev">
+			<ul>
+				<li>-webkit-box-shadow: 10px 10px 5px #888;</li>
+				<li>-moz-box-shadow: 10px 10px 5px #888;</li>
+				<li>box-shadow: 10px 10px 5px #888;</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap5">
+		<h1>5. text-shadow</h1>
+		<div class="prev">
+			text-shadow: 2px 2px 1px #f24;
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap6">
+		<h1>6. word-wrap</h1>
+		<div class="prev">
+			<div id="prev1">
+				This is a long word , This is a long word........ <br>
+				word-wrap: normal;
+			</div>
+			<div id="prev2">
+				This is a long word , This is a long word........ <br>
+				word-wrap: break-word;
+			</div>
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap7">
+		<h1>7. border-image</h1>
+		<div class="prev">
+			<div class="img1">
+				<ul>
+					<li>border: 1em;</li>
+					<li>-moz-border-image: url(../img/home.jpeg) 27 27 27 27 round</li>
+					<li>-webkit-border-image: url(../img/home.jpeg) 27 27 27 27 round</li>
+				</ul>
+			</div>
+			<div class="img2">
+				<ul>
+					<li>border: 1em;</li>
+					<li>-moz-border-image: url(../img/home.jpeg) 27 27 27 27 stretch</li>
+					<li>-webkit-border-image: url(../img/home.jpeg) 27 27 27 27 stretch</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap8">
+		<h1>8. resize</h1>
+		<div class="prev">
+			resize: both; <br>	
+			overflow: auto; <br>
+			This is is is is is is is is is is is <br>
+			This is is is is is is is is is is is <br>
+			This is is is is is is is is is is is <br>
+			This is is is is is is is is is is is <br>
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap9">
+		<h1>9. outline</h1>
+		<div class="prev">
+			<ul>
+				<li>outline-offset: 10px;</li>
+				<li>outline: 1px solid #BCDDFD;</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap10">
+		<h1>transform</h1>
+		<div class="prev">
+			<div class="d1">
+				<ul>
+					<li>transform: rotate(30deg);</li>
+					<li>-moz-transform: rotate(30deg);</li>
+					<li>-webkit-transform: rotate(30deg);</li>
+				</ul>
+			</div>
+			<div class="d2">
+				<ul>
+					<li>transform: scale(0.5, 2.0);</li>
+					<li>-moz-transform: scale(0.5, 2.0);</li>
+					<li>-webkit-transform: scale(0.5, 2.0);</li>
+				</ul>
+			</div>
+			<div class="d3">
+				<ul>
+					<li>transform: skew(-30deg);</li>
+					<li>-moz-transform: skew(-30deg);</li>
+					<li>-webkit-transform: skew(-30deg);</li>
+				</ul>
+			</div>
+			<div class="d4">
+				<ul>
+					<li>transform: translate(30px, 0);</li>
+					<li>-moz-transform: translate(30px, 0);</li>
+					<li>-webkit-transform: translate(30px, 0);</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap11">
+		<h1>transition</h1>
+		<div class="prev">
+			transition: all 1s ease-out <br>
+			-webkit-transition: all 1s ease-out
+		</div>
+	</div>
+
+	<div class="wrap" id="wrap12">
+		<h1>animation</h1>
+		<div class="prev">
+			-webkit-animation: greenPulse infinite ease-in-out 3s;
+		</div>
+	</div>
+
+</body>
+</html>
