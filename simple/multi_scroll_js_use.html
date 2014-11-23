@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multi Scroll JS</title>
+	<link rel="stylesheet" href="lib/jquery.multiscroll.css">
+	<link rel="stylesheet" href="multi_scroll_js_use.css">
+</head>
+<body>
+	
+	<ul id="menu">
+		<li data-menuanchor="first"><a href="#first">First</a></li>
+		<li data-menuanchor="second"><a href="#second">Second</a></li>
+		<li data-menuanchor="third"><a href="#third">Third</a></li>
+	</ul>
+
+	<div id="myContainer">
+		<div class="ms-left">
+			<div class="ms-section" id="left1">
+				<h1>Left 1</h1>
+			</div>
+			<div class="ms-section" id="left2">
+				<h1>Left 2</h1>
+			</div>
+			<div class="ms-section" id="left3">
+				<h1>Left 3</h1>
+			</div>
+		</div>
+		<div class="ms-right">
+			<div class="ms-section" id="right1">
+				<h1>Right 1</h1>
+			</div>
+			<div class="ms-section" id="right2">
+				<h1>Right 2</h1>
+			</div>
+			<div class="ms-section" id="right3">
+				<h1>Right 3</h1>
+			</div>
+		</div>
+	</div>
+
+	<script src="../lib/jquery.min.js"></script>
+	<script src="lib/jquery.easings.min.js"></script>
+	<script src="lib/jquery.multiscroll.min.js"></script>
+	<script>
+		$(function(){
+			$("#myContainer").multiscroll({
+				sectionsColor: ['#c63d0f', '#1bbc9b', '#7e8f7c'],
+				anchors: ['first', 'second', 'third'],
+				menu: '#menu',
+				navigation: true,
+				navigationTooltips: ['One', 'Two', 'Three'],
+				loopBottom: true,
+				loopTop: true
+			})
+		})
+	</script>
+</body>
+</html>
