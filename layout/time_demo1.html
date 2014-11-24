@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Show time/number</title>
+	<style>
+		@import url("http://fonts.googleapis.com/css?family=Lato:100");
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html, body {
+			height: 100%;
+		}
+
+		#hex {
+			color: white;
+			font: 64px/64px Lato;
+			font-weight: 100;
+			height: 64px;
+			position: relative;
+			top: 50%;
+			margin-top: -32px;
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="hex"></div>
+
+	<script src="../lib/jquery.min.js"></script>
+	<script>
+		var d, h, m, s, color;
+		function displayTime(){
+			d = new Date();
+			h = d.getHours();
+			m = d.getMinutes();
+			s = d.getSeconds();
+
+			if(h<=9) h = '0'+h;
+			if(m<=9) m = '0'+m;
+			if(s<=9) s = '0'+s;
+
+			color = "#"+h+m+s;
+			document.body.style.background = color;
+			document.getElementById("hex").innerHTML = color;
+
+			setTimeout(displayTime, 1000);
+		}
+
+		displayTime();
+	</script>
+</body>
+</html>
