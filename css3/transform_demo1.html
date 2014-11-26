@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform</title>
+	<style>
+		.divgroup {
+			position: relative;
+			width: 400px;
+			height: 80px;
+			margin: 50px;
+		}
+		.box {
+			background: #fff;
+			border: 1px solid #ccc;
+			width: 400px;
+			height: 80px;
+			line-height: 80px;
+			text-align: center;
+			color: #000;
+			font-size: 16px;
+			font-family: 'Microsoft Yahei',arial;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		#div1 {
+			transform: skew(15deg);
+		}
+		#div2 {
+			transform: scale(1, 0.8);
+		}
+		#div3 {
+			transform: rotate(10deg);
+		}
+		#div4 {
+			transform: translate(10px, 20px);
+		}
+		.box.origin {
+			background: #777;
+		}
+	</style>
+</head>
+<body>
+	<div class="divgroup">
+		<div class="origin box"></div>
+		<div id="div1" class="box">div1(变形): transform: skew(35deg);</div>
+	</div>
+	<div class="divgroup">
+		<div class="origin box"></div>
+		<div id="div2" class="box">div2(压缩/拉伸): transform: scale(1, 0.5);</div>
+	</div>
+	<div class="divgroup">
+		<div class="origin box"></div>
+		<div id="div3" class="box">div3(旋转): transform: rotate(45deg);</div>
+	</div>
+	<div class="divgroup">
+		<div class="origin box"></div>
+		<div id="div4" class="box">div4(偏移): transform: translate(10px, 20px);</div>
+	</div>
+</body>
+</html>

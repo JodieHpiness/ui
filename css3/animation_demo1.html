@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<style>
+		@-webkit-keyframes resize {
+			0% {padding: 0;}
+			50% { padding: 0 20px; background-color: rgba(190, 206, 235, 0.2); }
+			100% { padding: 0 100px; background-color: rgba(190, 206, 235, 0.9); }
+		}
+		.box {
+			border: 1px solid #ccc;
+			width: 100px;
+			height: 100px;
+			margin: 100px;
+		}
+		.box:hover {
+			-webkit-animation-name: resize;
+			-webkit-animation-duration: 1.5s;
+			-webkit-animation-iteration-count: 4;
+			-webkit-animation-direction: alternate;
+			-webkit-animation-timing-function: ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		hover~~
+	</div>
+</body>
+</html>
