@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transform</title>
+	<style>
+		.box {
+			border: 1px solid #ccc;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			font: 14px/16px 'Microsoft Yahei',arial;
+			margin: 100px;
+			-webkit-transtion: all 2s ease-in-out;
+			-moz-transition: all 2s ease-in-out;
+			-ms-transition: all 2s ease-in-out;
+			-o-transition: all 2s ease-in-out;
+			transition: all 2s ease-in-out;
+		}
+		.box:hover {
+			-webkit-transform: rotate(720deg) scale(2,2);
+			-moz-transform: rotate(720deg) scale(2,2);
+			-ms-transform: rotate(720deg) scale(2,2);
+			-o-tranform: rotate(720deg) scale(2,2);
+			tranform: rotate(720deg) scale(2,2);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		hover~~~
+	</div>
+</body>
+</html>

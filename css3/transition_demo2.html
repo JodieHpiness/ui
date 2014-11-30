@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style>
+		.box {
+			width: 80px;
+			height: 80px;
+			background: #888;
+			margin-top: 10px;
+			color: #fff;
+			font-size: 12px;
+			font-family: 'Microsoft Yahei', Arial;
+		}
+		#div1 {
+			-webkit-transition: margin-left 1s ease;
+			-moz-transition: margin-left 1s ease;
+			-o-transition: margin-left 1s ease;
+			transition: margin-left 1s ease;
+		}
+		#div2 {
+			-webkit-transition: margin-left 1s linear;
+			-moz-transition: margin-left 1s linear;
+			-o-transition: margin-left 1s linear;
+			transition: margin-left 1s linear;
+		}
+		#div3 {
+			-webkit-transition: margin-left 1s ease-in;
+			-moz-transition: margin-left 1s ease-in;
+			-o-transition: margin-left 1s ease-in;
+			transition: margin-left 1s ease-in;
+		}
+		#div4 {
+			-webkit-transition: margin-left 1s ease-out;
+			-moz-transition: margin-left 1s ease-out;
+			-o-transition: margin-left 1s ease-out;
+			transition: margin-left 1s ease-out;
+		}
+		#div5 {
+			-webkit-transition: margin-left 1s ease-in-out;
+			-moz-transition: margin-left 1s ease-in-out;
+			-o-transition: margin-left 1s ease-in-out;
+			transition: margin-left 1s ease-in-out;
+		}
+		#div6 {
+			-webkit-transition: margin-left 1s cubic-bezier;
+			-moz-transition: margin-left 1s cubic-bezier;
+			-o-transition: margin-left 1s cubic-bezier;
+			transition: margin-left 1s cubic-bezier;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1" class="box">ease <br> 越来越慢</div>
+	<div id="div2" class="box">linear <br> 匀速</div>
+	<div id="div3" class="box">ease-in <br> 先慢后快</div>
+	<div id="div4" class="box">ease-out <br> 先快后慢</div>
+	<div id="div5" class="box">ease-in-out <br>先慢后快再慢</div>
+	<div id="div6" class="box">cubic-bezier <br> </div>
+
+	<script src="../lib/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$(".box").css({'marginLeft':'500px'});
+		})
+	</script>
+</body>
+</html>

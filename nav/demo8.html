@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +8,20 @@
 		/* custom font */
 		/*@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);*/
 
+=======
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Acocordian</title>
+	<style>
+		/*@import url(http://fonts.googleapis.com/css?family=Nunito);*/
+>>>>>>> c894d613f408ac196bc88afb9fcc26bcfe1c840d
 		* {
 			margin: 0;
 			padding: 0;
 		}
+<<<<<<< HEAD
 
 		html, body {
 			min-height: 100%;
@@ -127,5 +138,115 @@
 	</div>
 
 	<script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js"></script>
+=======
+		body {
+			background: #43b889;
+			font-family: Nunito, arial, verdana;
+		}
+		#accordian {
+			background: #004050;
+			width: 250px;
+			margin: 100px auto 0 auto;
+			color: #fff;
+			box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.6),
+						0 0 200px 1px rgba(255, 255, 255, 0.5);
+		}
+		#accordian h3 {
+			font-size: 12px;
+			line-height: 34px;
+			padding: 0 10px;
+			cursor: pointer;
+			background: #003040;
+			background: linear-gradient(#003040, #002535);
+		}
+		#accordian h3:hover {
+			text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+		}
+		#accordian h3 span {
+			font-size: 16px;
+			margin-right: 10px;
+		}
+		#accordian li {
+			list-style-type: none;
+		}
+		#accordian ul ul li a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 11px;
+			line-height: 27px;
+			display: block;
+			padding: 0 15px;
+			transition: all 0.15s;
+		}
+		#accordian ul ul li a:hover {
+			background: #003545;
+			border-left: 5px solid lightgreen;
+		}
+		#accordian ul ul {
+			display: none;
+		}
+		#accordian li.active ul {
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="accordian">
+		<ul>
+			<li>
+				<h3><span class="icon-dashboard"></span>Dashboard</h3>
+				<ul>
+					<li><a href="#">Title 1</a></li>
+					<li><a href="#">Title 2</a></li>
+					<li><a href="#">Title 3</a></li>
+					<li><a href="#">Title 4</a></li>
+				</ul>
+			</li>
+			<li class="active">
+				<h3><span class="icon-dashboard"></span>Dashboard</h3>
+				<ul>
+					<li><a href="#">Title 1</a></li>
+					<li><a href="#">Title 2</a></li>
+					<li><a href="#">Title 3</a></li>
+					<li><a href="#">Title 4</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3><span class="icon-dashboard"></span>Dashboard</h3>
+				<ul>
+					<li><a href="#">Title 1</a></li>
+					<li><a href="#">Title 2</a></li>
+					<li><a href="#">Title 3</a></li>
+					<li><a href="#">Title 4</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3><span class="icon-dashboard"></span>Dashboard</h3>
+				<ul>
+					<li><a href="#">Title 1</a></li>
+					<li><a href="#">Title 2</a></li>
+					<li><a href="#">Title 3</a></li>
+					<li><a href="#">Title 4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<script src="../lib/prefixfree-1.0.7.js"></script>
+	<script src="../lib/jquery.min.js"></script>
+
+	<script>
+
+		$(function(){
+			$("#accordian h3").click(function(){
+				$("#accordian ul ul").slideUp();
+				if(!$(this).next().is(":visible")){
+					$(this).next().slideDown();
+				}
+			})
+		})
+	</script>
+>>>>>>> c894d613f408ac196bc88afb9fcc26bcfe1c840d
 </body>
 </html>
