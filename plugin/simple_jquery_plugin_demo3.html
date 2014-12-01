@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>simple jquery plugin</title>
+</head>
+<body>
+	<p class="demo"> demo .... </p>
+	<p class="demo"> demo .... </p>
+	<p class="demo"> demo .... </p>
+
+	<script src="../lib/jquery.min.js"></script>
+	<script>
+		(function($){
+			$.fn.greenify = function(options){
+				var settings = $.extend({
+					color: "#556b2f",
+					backgroundColor: "white",
+					fontWeight: "bold"
+				}, options);
+
+				return this.css({
+					color: settings.color,
+					backgroundColor: settings.backgroundColor,
+					fontWeight: settings.fontWeight
+				})
+			}
+
+			
+		}(jQuery));
+
+		$(".demo").greenify({
+			color: "#f00"
+		});
+	</script>
+</body>
+</html>

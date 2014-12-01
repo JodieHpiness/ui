@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>simple jquery plugin demo</title>
+</head>
+<body>
+	<a href="http://www.touna.cn">FFF</a>
+	<a href="http://www.baidu.com">FFF</a>
+	<a href="http://www.iteye.com">FFF</a>
+
+	<script src="../lib/jquery.min.js"></script>
+	<script>
+		(function($){
+			// $.fn.showLinkLocation = function(){
+			// 	this.filter('a').each(function(){
+			// 		var link = $(this);
+			// 		link.append('('+link.attr('href')+')');
+			// 	})
+			// }
+
+			$.fn.showLinkLocation = function(){
+				this.filter('a').append(function(){
+					return '('+this.href+')';
+				})
+			}
+		}(jQuery))
+
+		$('a').showLinkLocation();
+	</script>
+</body>
+</html>

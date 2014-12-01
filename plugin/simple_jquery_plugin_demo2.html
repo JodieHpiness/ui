@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>simple jquery plugin demo</title>
+</head>
+<body>
+
+	<p class="demo"> demo 1.....</p>
+	<p class="demo"> demo 2.....</p>
+	<p class="demo"> demo 3.....</p>
+	
+	<script src="../lib/jquery.min.js"></script>
+	<script>
+		$.fn.myplugin = function(){
+			console.log(this.eq(2).html());
+			return this.each(function(){
+				console.log(this);
+			})
+		}
+
+		$(".demo").myplugin();
+	</script>
+</body>
+</html>

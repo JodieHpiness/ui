@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Jquery Plugin Demo</title>
+</head>
+<body>
+	<span class="demo">This is demo</span>
+
+	<p id="demo1">Chain demo</p>
+
+	<script src="../lib/jquery.min.js"></script>
+	<script>
+		$.fn.turnred = function(){
+			this.css("color", "#f00");
+		}
+
+		$(".demo").turnred();
+
+		$.fn.chainred = function(){
+			this.css("color", "#f00");
+			return this;
+		}
+		$("#demo1").chainred().css("font-weight","bold");
+	</script>
+</body>
+</html>
