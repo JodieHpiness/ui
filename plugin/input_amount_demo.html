@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>为Input绑定amount校验</title>
+	<style>
+		body {
+			font: 12px/16px "Microsoft Yahei", arial;
+		}
+		input {
+			padding: 10px 10px;
+			width: 250px;
+			color: #B7BABD;
+			outline: none;
+			border-radius: 5px;
+			border: 3px solid #B7BABD;
+			box-shadow: 0px 0px 5px 0px #B7BABD;
+		}
+		input:focus {
+			color: #2987EE;
+			border: 3px solid #2987EE;
+			box-shadow: 0px 0px 5px 0px #2987EE;
+		}
+		input.success {
+			color: #1DC738;
+			border: 3px solid #1DC738;
+			box-shadow: 0px 0px 5px 0px #1DC738;
+		}
+		input.fail {
+			color: #EB4B0D;
+			border: 3px solid #EB4B0D;
+			box-shadow: 0px 0px 5px 0px #ff3333;
+		}
+		.err {
+			font-size: 12px;
+			color: #ff3333;
+			padding-left: 15px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<input type="text" class="amount">
+	<p class="err"></p>
+
+	<script src="../lib/jquery.min.js"></script>
+	<script>
+
+		var log = function(msg){
+			$(".err").html(msg);
+		}
+		$.fn.checkAmount = function(options){
+			var settings = $.extend({
+				min: 0,
+				max: 1e9
+			}, options);
+
+			this.blur(function(){
+				var money = this.value;
+				if(!money || isNaN(money)){
+					$(this).addClass("fail");
+					log("请输入正确的金额");
+				}else if(money < settings.min || money > settings.max){
+					$(this).addClass("fail");
+					log("输入金额需在"+settings.min+"和"+settings.max+"之间");
+
+				}else {
+					$(this).removeClass("fail").addClass("success");
+					log("");
+				}
+
+			});
+			return this;
+		}
+
+		
+		$(function(){
+			$(".amount").checkAmount({min:5});
+		})
+	</script>
+</body>
+</html>
