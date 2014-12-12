@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>click event add border</title>
+	<style>
+		div.normal {
+			margin: 50px;
+			width: 100px;
+			height: 100px;
+			background: #ddd;
+		}
+		div.clicked {
+			margin: 50px;
+			width: 100px;
+			height: 100px;
+			background: #ddd;
+			border: 1px solid #aaa;
+			padding: 5px;
+		}
+		div.content {
+			background: #fafafa;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="myDiv" class="normal" onmousedown="divMouseDown()" onmouseout="divMouseOver()">
+		<div class="content"></div>
+	</div>
+
+	<script>
+		var divMouseDown = function(){
+			document.getElementById("myDiv").className = "clicked";
+		}
+		var divMouseOver = function(){
+			document.getElementById("myDiv").className = "normal";
+		}
+	</script>
+</body>
+</html>

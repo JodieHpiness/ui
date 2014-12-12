@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slide</title>
+	<style>
+		#slide {
+			width: 550px;
+			height: 160px;
+			position: relative;
+		}
+		#wrap {
+			width: 550px;
+			height: 160px;
+			overflow: hidden;
+			position: relative;
+			top: 0;
+			left: 0;
+		}
+		.item {
+			width: 100px;
+			height: 150px;
+			background: #c0c0c0;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			float: left;
+			position: relative;
+			text-align: center;
+			font: 30px/16px arial;
+			line-height: 150px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+		<div class="item">7</div>
+		<div class="item">8</div>
+		<div class="item">9</div>
+		<div class="item">10</div>
+	</div>
+	<button onclick='goLeft()'><<</button>
+	<button onclick="goRight()">>></button>
+
+	<script>
+		var goLeft = function(){
+			console.log(document.getElementById("wrap").style.left);
+			document.getElementById("wrap").style.left += 110;
+		}
+		var goRight = function(){
+
+		}
+
+	</script>
+</body>
+</html>
