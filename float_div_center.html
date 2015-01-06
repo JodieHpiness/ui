@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>居中一个浮动的div</title>
+	<style>
+	#wrap {
+		width: 500px;
+		height: 500px;
+		border: 1px solid #ccc;
+		margin: 50px;
+	}
+	#wrap .float {
+		float: left;
+		width: 100px;
+		height: 100px;
+		background: #33ff00;
+		margin: -50px 0 0 -50px;
+		position: relative;
+		top: 50%;
+		left: 50%;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		
+		<div class="float"></div>
+	</div>
+</body>
+</html>
